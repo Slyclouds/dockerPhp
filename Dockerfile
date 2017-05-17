@@ -81,6 +81,10 @@ RUN \
         make && \
         make install
 
+COPY conf/php.ini /usr/local/php7/lib/php.ini
+COPY conf/www.conf /usr/local/php7/etc/php-fpm.d/www.conf
+COPY conf/php-fpm.conf /usr/local/php7/etc/php-fpm.conf
+COPY conf/php7-fpm.init /etc/init.d/php7-fpm
 
 RUN ln -s /usr/local/php7/sbin/php-fpm /usr/local/php7/sbin/php7-fpm
 RUN chmod +x /etc/init.d/php7-fpm
