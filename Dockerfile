@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:jessie
 
 ENV PHP_VERSION 7.0.19
 
